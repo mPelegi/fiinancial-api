@@ -21,6 +21,7 @@ namespace Fiinancial.Api.Service.DependencyInjection.UnitOfWorkInjection
             #region Geral
 
             services.AddScoped<IFrequenciaUnitOfWork, FrequenciaUnitOfWork>();
+            services.AddScoped<IUsuarioUnitOfWork, UsuarioUnitOfWork>();
 
             #endregion
         }

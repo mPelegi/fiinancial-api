@@ -1,4 +1,5 @@
 ﻿using Fiinancial.Api.Service.Mappers.ContaCtx;
+using Fiinancial.Api.Service.Mappers.GeralCtx;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Fiinancial.Api.Service.DependencyInjection.MapperInjection
@@ -10,6 +11,12 @@ namespace Fiinancial.Api.Service.DependencyInjection.MapperInjection
             #region Conta
 
             services.AddScoped<ContaMapper>();
+
+            #endregion
+
+            #region Geral
+
+            services.AddScoped<UsuarioMapper>();
 
             #endregion
         }

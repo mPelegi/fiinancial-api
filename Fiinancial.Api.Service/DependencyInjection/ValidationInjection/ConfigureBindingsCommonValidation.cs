@@ -19,6 +19,7 @@ namespace Fiinancial.Api.Service.DependencyInjection.ValidationInjection
             #region Geral
 
             services.AddScoped<FrequenciaValidator>();
+            services.AddScoped<UsuarioValidator>();
 
             #endregion
 

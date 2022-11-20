@@ -14,7 +14,6 @@ namespace Fiinancial.Api.Domain.Entities.GeralCtx
 
         [Column("Nome")]
         [StringLength(30)]
-        [Required]
         public string Nome { get; set; } = string.Empty;
 
         [Column("IntervaloDias")]

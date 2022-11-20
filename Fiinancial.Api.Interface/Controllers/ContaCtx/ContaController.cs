@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Fiinancial.Api.Interface.Controllers.ContaCtx
 {
@@ -48,10 +49,7 @@ namespace Fiinancial.Api.Interface.Controllers.ContaCtx
         /// </summary>
         [HttpPut("{id:int}")]
         [SwaggerResponse((int)HttpStatusCode.OK, "Conta atualizada com sucesso.", typeof(int))]
-        public async Task<IActionResult> Update(int id, [FromBody] ContaPutDto dto, CancellationToken ct)
-        {
-            return Ok(await _appService.Update(id, dto, ct));
-        }
+        public async Task<IActionResult> Update(int id, [FromBody] ContaPutDto dto, CancellationToken ct) => Ok(await _appService.Update(id, dto, ct));
 
         /// <summary>
         /// Exclusão de uma Conta através de um Id de entrada.

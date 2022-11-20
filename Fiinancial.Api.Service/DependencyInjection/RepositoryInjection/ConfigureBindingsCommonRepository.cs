@@ -28,6 +28,7 @@ namespace Fiinancial.Api.Service.DependencyInjection.RepositoryInjection
             #region Geral
 
             services.AddScoped<IFrequenciaRepository, FrequenciaRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             #endregion
 
